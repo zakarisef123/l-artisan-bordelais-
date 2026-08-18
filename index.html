@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -33,7 +34,7 @@
   <script>gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');</script>
 -->
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23211c16'/%3E%3Ccircle cx='27' cy='24' r='8' fill='none' stroke='%23d97a4f' stroke-width='4'/%3E%3Cpath d='M31 30 L44 43 M39 38 L44 33 M44 43 L49 38' stroke='%23d97a4f' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="images/logo.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -110,8 +111,8 @@ a{color:inherit;}
 header.site-head{position:sticky; top:0; z-index:400; background:rgba(250,247,240,.94); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
 .head-row{display:flex; align-items:center; justify-content:space-between; gap:1rem; height:76px;}
 .brand{display:flex; align-items:center; gap:.7rem; text-decoration:none; min-width:0;}
-.brand-mark{flex-shrink:0; width:46px; height:46px; border-radius:50%; background:var(--ink); display:flex; align-items:center; justify-content:center;}
-.brand-mark svg{width:24px; height:24px; color:var(--brass-light);}
+.brand-mark{flex-shrink:0; height:50px; display:flex; align-items:center; justify-content:center;}
+.brand-mark img{height:100%; width:auto; display:block;}
 .brand-text{line-height:1.15; min-width:0;}
 .brand-text strong{display:block; font-family:"Fraunces",serif; font-size:1.02rem; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 .brand-text span{display:block; font-size:.62rem; text-transform:uppercase; letter-spacing:.14em; color:var(--slate); font-weight:600;}
@@ -149,8 +150,8 @@ nav.main-nav a:hover{color:var(--brass-dark);}
 .btn-ghost{display:inline-flex; align-items:center; gap:.6rem; background:transparent; color:var(--ink); text-decoration:none; font-weight:700; padding:1.05rem 1.6rem; border-radius:14px; border:2px solid var(--ink);}
 .btn-ghost:hover{background:var(--ink); color:#fff;}
 .hero-visual{width:100%; max-width:420px; aspect-ratio:1/1; position:relative; flex-shrink:0;}
-.hero-visual .ring{position:absolute; inset:0; border-radius:50%; background:linear-gradient(155deg, var(--brass-light), var(--brass-dark) 78%); box-shadow:var(--shadow);}
-.hero-visual svg{position:absolute; inset:0; margin:auto; width:46%; height:46%; color:rgba(255,255,255,.92);}
+.hero-visual .ring{position:absolute; inset:0; border-radius:50%; background:linear-gradient(155deg, var(--brass-light), var(--brass-dark) 78%); box-shadow:var(--shadow); overflow:hidden;}
+.hero-visual .ring img{width:100%; height:100%; object-fit:cover; border-radius:50%; mix-blend-mode:normal;}
 .hero-visual .chip{position:absolute; bottom:-.8rem; left:-.6rem; background:var(--ink); color:#fff; padding:1.1rem 1.4rem; border-radius:18px; box-shadow:var(--shadow);}
 .hero-visual .chip strong{display:block; font-family:"Fraunces",serif; font-size:1.5rem; color:var(--brass-light);}
 .hero-visual .chip span{display:block; font-size:.62rem; text-transform:uppercase; letter-spacing:.12em; color:#c8c4ba;}
@@ -165,6 +166,15 @@ nav.main-nav a:hover{color:var(--brass-dark);}
 .trust-item span{font-size:.86rem; font-weight:700; color:var(--slate-dark); white-space:nowrap;}
 @keyframes trust-scroll{from{transform:translateX(0);} to{transform:translateX(-50%);}}
 @media (prefers-reduced-motion: reduce){.trust-track{animation:none;}}
+
+/* ===== INSURANCE BANNER ===== */
+.insurance-section{padding:3.2rem 0; border-bottom:1px solid var(--line); background:var(--paper-alt);}
+.insurance-head{max-width:640px; margin:0 auto 1.8rem; text-align:center;}
+.insurance-head h2{font-size:clamp(1.35rem,3vw,1.7rem); font-weight:600; margin:0 0 .6rem;}
+.insurance-head p{color:var(--slate-dark); font-size:.92rem; margin:0;}
+.insurance-logos{display:flex; flex-wrap:wrap; gap:.9rem; justify-content:center; align-items:stretch;}
+.insurance-logo{background:#fff; border:1px solid var(--line); border-radius:var(--radius-sm); box-shadow:var(--shadow); width:148px; height:76px; display:flex; align-items:center; justify-content:center; padding:.9rem 1.2rem;}
+.insurance-logo img{max-width:100%; max-height:100%; object-fit:contain;}
 
 /* ===== STEPS ===== */
 .steps-section{padding:4.5rem 0;}
@@ -202,7 +212,9 @@ nav.main-nav a:hover{color:var(--brass-dark);}
 /* ===== SERVICES ===== */
 .services-section{padding:4.5rem 0; background:var(--paper-alt);}
 .services-grid{display:grid; grid-template-columns:1fr; gap:1.2rem;}
-.svc-card{background:#fff; border-radius:var(--radius-md); padding:1.6rem; border:1px solid var(--line); display:flex; flex-direction:column;}
+.svc-card{background:#fff; border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--line); display:flex; flex-direction:column;}
+.svc-card-body{padding:1.6rem; display:flex; flex-direction:column; flex:1;}
+.svc-photo{width:100%; aspect-ratio:4/3; object-fit:cover; display:block;}
 .svc-icon{width:52px; height:52px; border-radius:14px; background:var(--ink); display:flex; align-items:center; justify-content:center; color:var(--brass-light); margin-bottom:1rem;}
 .svc-card h3{margin:0 0 .5rem; font-size:1.1rem;}
 .svc-card p{margin:0 0 1.2rem; font-size:.86rem; color:var(--slate); flex:1;}
@@ -329,7 +341,7 @@ body.cmp-active .sticky-cta{transform:translateY(200%) !important;}
   <div class="container head-row">
     <a href="#accueil" class="brand">
       <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="5"></circle><path d="M12.5 12.5 21 21M16 17l3-3"></path></svg>
+        <img src="images/logo.png" alt="" loading="eager">
       </span>
       <span class="brand-text">
         <strong>L'Artisan Serrurier</strong>
@@ -389,9 +401,10 @@ body.cmp-active .sticky-cta{transform:translateY(200%) !important;}
           <a href="#contact" class="btn-ghost">Demander un devis</a>
         </div>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="ring"></div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="5"></circle><path d="M12.5 12.5 21 21M16 17l3-3"></path></svg>
+      <div class="hero-visual">
+        <div class="ring">
+          <img src="images/hero-intervention.jpg" alt="Serrurier de L'Artisan Serrurier Bordelais intervenant chez un client à Bordeaux" loading="eager">
+        </div>
         <div class="chip"><strong>Sur place</strong><span>Devis annoncé avant travaux</span></div>
       </div>
     </div>
@@ -448,6 +461,26 @@ body.cmp-active .sticky-cta{transform:translateY(200%) !important;}
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"></path></svg>
           <span>Intervention rapide sur Bordeaux et alentours</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="insurance-section" aria-label="Assurances partenaires">
+    <div class="container">
+      <div class="insurance-head">
+        <span class="eyebrow">Assurances</span>
+        <h2>Une facture reconnue par votre assureur</h2>
+        <p>En cas de sinistre (effraction, dégât des eaux...), la facture détaillée remise après intervention est acceptée par les principales compagnies d'assurance habitation.</p>
+      </div>
+      <div class="insurance-logos">
+        <span class="insurance-logo"><img src="images/insurance/generali.png" alt="Generali" loading="lazy"></span>
+        <span class="insurance-logo"><img src="images/insurance/axa.jpeg" alt="AXA" loading="lazy"></span>
+        <span class="insurance-logo"><img src="images/insurance/allianz.png" alt="Allianz" loading="lazy"></span>
+        <span class="insurance-logo"><img src="images/insurance/maif.png" alt="MAIF" loading="lazy"></span>
+        <span class="insurance-logo"><img src="images/insurance/maaf.png" alt="MAAF" loading="lazy"></span>
+        <span class="insurance-logo"><img src="images/insurance/matmut.png" alt="Matmut" loading="lazy"></span>
+        <span class="insurance-logo"><img src="images/insurance/macif.png" alt="MACIF" loading="lazy"></span>
+        <span class="insurance-logo"><img src="images/insurance/groupama.png" alt="Groupama" loading="lazy"></span>
       </div>
     </div>
   </section>
@@ -520,6 +553,8 @@ body.cmp-active .sticky-cta{transform:translateY(200%) !important;}
       <div class="services-grid">
 
         <article class="svc-card">
+          <img class="svc-photo" src="images/service-ouverture-porte.jpg" alt="Ouverture de porte par un serrurier" loading="lazy">
+          <div class="svc-card-body">
           <span class="svc-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 21v-6h4v6"></path></svg></span>
           <h3>Ouverture de porte</h3>
           <p>Porte claquée, verrouillée ou bloquée : j'ouvre sans forcer dès que possible.</p>
@@ -527,9 +562,12 @@ body.cmp-active .sticky-cta{transform:translateY(200%) !important;}
             <a href="tel:+33606060606" class="svc-call">Appeler</a>
             <button type="button" class="svc-quote" data-service="Ouverture de porte">Demander un devis</button>
           </div>
+          </div>
         </article>
 
         <article class="svc-card">
+          <img class="svc-photo" src="images/service-changement-serrure.jpg" alt="Changement de serrure sur une porte d'entrée" loading="lazy">
+          <div class="svc-card-body">
           <span class="svc-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span>
           <h3>Changement de serrure</h3>
           <p>Toutes marques, simple ou multipoints. Vous choisissez le niveau de sécurité.</p>
@@ -537,9 +575,12 @@ body.cmp-active .sticky-cta{transform:translateY(200%) !important;}
             <a href="tel:+33606060606" class="svc-call">Appeler</a>
             <button type="button" class="svc-quote" data-service="Changement de serrure">Demander un devis</button>
           </div>
+          </div>
         </article>
 
         <article class="svc-card">
+          <img class="svc-photo" src="images/service-porte-blindee.jpg" alt="Pose d'une porte blindée haute sécurité" loading="lazy">
+          <div class="svc-card-body">
           <span class="svc-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><circle cx="15" cy="12" r="1"></circle></svg></span>
           <h3>Porte blindée</h3>
           <p>Renforcement de votre entrée avec un bloc-porte haute sécurité posé dans les règles.</p>
@@ -547,9 +588,11 @@ body.cmp-active .sticky-cta{transform:translateY(200%) !important;}
             <a href="tel:+33606060606" class="svc-call">Appeler</a>
             <button type="button" class="svc-quote" data-service="Porte blindée">Demander un devis</button>
           </div>
+          </div>
         </article>
 
         <article class="svc-card">
+          <div class="svc-card-body">
           <span class="svc-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7a3 3 0 1 0-3-3M12 4l-9 9 3 3 9-9M6 16l2 2"></path></svg></span>
           <h3>Reproduction de clés</h3>
           <p>Double de clé standard ou de sécurité, réalisé pendant que vous patientez.</p>
@@ -557,9 +600,12 @@ body.cmp-active .sticky-cta{transform:translateY(200%) !important;}
             <a href="tel:+33606060606" class="svc-call">Appeler</a>
             <button type="button" class="svc-quote" data-service="Reproduction de clés">Demander un devis</button>
           </div>
+          </div>
         </article>
 
         <article class="svc-card">
+          <img class="svc-photo" src="images/service-securisation-effraction.jpg" alt="Sécurisation d'une porte après effraction" loading="lazy">
+          <div class="svc-card-body">
           <span class="svc-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg></span>
           <h3>Sécurisation après effraction</h3>
           <p>Changement de cylindre, réparation de dormant, mise en sécurité de votre logement.</p>
@@ -567,15 +613,19 @@ body.cmp-active .sticky-cta{transform:translateY(200%) !important;}
             <a href="tel:+33606060606" class="svc-call">Appeler</a>
             <button type="button" class="svc-quote" data-service="Sécurisation après effraction">Demander un devis</button>
           </div>
+          </div>
         </article>
 
         <article class="svc-card">
+          <img class="svc-photo" src="images/service-rideau-metallique.jpg" alt="Réparation d'un rideau métallique de commerce" loading="lazy">
+          <div class="svc-card-body">
           <span class="svc-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18M3 15h18"></path></svg></span>
           <h3>Rideau métallique &amp; volet</h3>
           <p>Dépannage de rideau de commerce bloqué ou de volet roulant qui ne répond plus.</p>
           <div class="svc-actions">
             <a href="tel:+33606060606" class="svc-call">Appeler</a>
             <button type="button" class="svc-quote" data-service="Rideau métallique / volet">Demander un devis</button>
+          </div>
           </div>
         </article>
 
@@ -700,8 +750,8 @@ body.cmp-active .sticky-cta{transform:translateY(200%) !important;}
     <div class="foot-grid">
       <div>
         <div class="foot-brand">
-          <span class="brand-mark" aria-hidden="true" style="width:38px;height:38px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="5"></circle><path d="M12.5 12.5 21 21M16 17l3-3"></path></svg>
+          <span class="brand-mark" aria-hidden="true" style="height:40px;">
+            <img src="images/logo.png" alt="">
           </span>
           <strong>L'Artisan Serrurier Bordelais</strong>
         </div>
